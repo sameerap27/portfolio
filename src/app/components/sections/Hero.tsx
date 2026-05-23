@@ -1,10 +1,10 @@
 export default function Hero() {
   return (
     <section id="hero">
-      <h1>
+      <h1 style={{ margin: '0px', padding: 0 }}>
         Hi there!
       </h1>
-      <h1 style={{ marginTop: '0px' }}>
+      <h1 style={{ margin: '0px', padding: 0 }}>
         I'm Sameera
       </h1>
       <p className="home-body">
@@ -14,6 +14,7 @@ export default function Hero() {
       </p>
       <a className="btn" href="#projects">
         View My Work
+        <img src="/angle-down.svg" alt="Move down icon" className="angle-down-icon" />
       </a>
     </section>
   );

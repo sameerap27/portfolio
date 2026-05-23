@@ -1,8 +1,8 @@
 import SocialLinks from '../layout/SocialLinks';
 
 const CONTACT_INFO = [
-  { title: 'Email Address', content: 'sameerapatel04@gmail.com' },
-  { title: 'Phone Number', content: '+1 (704) 299 6871' },
+  { title: 'Email Address', content: 'sameerapatel04@gmail.com', icon: '/mail.svg' },
+  { title: 'Phone Number', content: '+1 (704) 299 6871', icon: '/phone.svg' },
 ];
 
 export default function Contact() {
@@ -29,19 +29,24 @@ export default function Contact() {
           </form>
         </div>
 
-        <div className="flex-item">
+        <div className="flex-item" style={{ padding: 0 }}>
           <div className="card">
             <h3>Open To Opportunities</h3>
-            <p>
+            <p style={{ margin: 0 }}>
               I'm currently available for new opportunities. Whether it's a full-time role,
               freelance project, or just a chat — reach out!
             </p>
           </div>
 
           {CONTACT_INFO.map((info) => (
-            <div key={info.title} className="card">
-              <h3>{info.title}</h3>
-              <p>{info.content}</p>
+            <div key={info.title} className="card contact-info-card" style={{ padding: '10px' }}>
+              <div className="contact-info-card-row">
+                <img src={info.icon} alt={`${info.title} icon`} className="contact-info-icon" />
+                <div className="contact-info-text">
+                  <h3 style={{ padding: 0, margin: 0 }}>{info.title}</h3>
+                  <p style={{ margin: 0 }}>{info.content}</p>
+                </div>
+              </div>
             </div>
           ))}
 
