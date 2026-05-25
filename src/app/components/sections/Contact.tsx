@@ -2,7 +2,6 @@ import SocialLinks from '../layout/SocialLinks';
 
 const CONTACT_INFO = [
   { title: 'Email Address', content: 'sameerapatel04@gmail.com', icon: '/mail.svg' },
-  { title: 'Phone Number', content: '+1 (704) 299 6871', icon: '/phone.svg' },
 ];
 
 export default function Contact() {
@@ -43,7 +42,7 @@ export default function Contact() {
               <div className="contact-info-card-row">
                 <img src={info.icon} alt={`${info.title} icon`} className="contact-info-icon" />
                 <div className="contact-info-text">
-                  <h3 style={{ padding: 0, margin: 0 }}>{info.title}</h3>
+                  <h3 style={{ padding: 0, margin: 0, fontSize: '18px' }}>{info.title}</h3>
                   <p style={{ margin: 0 }}>{info.content}</p>
                 </div>
               </div>
